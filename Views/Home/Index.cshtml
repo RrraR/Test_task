@@ -1,0 +1,17 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        @Html.TextBox("StrInput")
+        <input name="textinp" type="submit" id="textinp" value="Reverse"/>
+    }
+    
+    @ViewData["StrOutput"]
+    <textbox hidden="true"></textbox>
+</div>
